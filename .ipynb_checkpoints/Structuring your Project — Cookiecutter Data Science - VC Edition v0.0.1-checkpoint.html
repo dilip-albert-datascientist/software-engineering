@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0090)https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <title>Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1</title>
+    <link rel="stylesheet" href="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/bootstrap-astropy.css" type="text/css">
+    <link rel="stylesheet" href="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/pygments.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/badge_only.css">
+    <link rel="stylesheet" type="text/css" href="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/graphviz.css">
+    <script type="text/javascript" async="" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/analytics.js"></script><script type="text/javascript" id="documentation_options" data-url_root="../" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/documentation_options.js"></script>
+    <script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/underscore.js"></script>
+    <script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/doctools.js"></script>
+    <script async="async" type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/MathJax.js"></script>
+    <script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/readthedocs-doc-embed.js"></script>
+    <script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/sidebar.js"></script>
+    <link rel="shortcut icon" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/_static/astropy_logo.ico">
+    <link rel="index" title="Index" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/genindex.html">
+    <link rel="search" title="Search" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/search.html">
+    <link rel="next" title="Commands" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/commands.html">
+    <link rel="prev" title="Getting Started" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/getting_started.html">
+<link href="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/copybutton.js"></script>
+
+
+  
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html">
+
+<link rel="stylesheet" href="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'getting_started/INSTALL'
+READTHEDOCS_DATA['source_suffix'] = '.rst'
+</script>
+
+<script type="text/javascript" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/readthedocs-analytics.js"></script><script src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/js" type="text/javascript" async=""></script>
+
+<!-- end RTD <extrahead> -->
+<script src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/ethicalads.min.js" type="text/javascript" async="" id="ethicaladsjs"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style>[data-ea-publisher].loaded,[data-ea-type].loaded{font-size:14px;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-weight:normal;font-style:normal;leter-spacing:0px;vertical-align:baseline;line-height:1.3em}[data-ea-publisher].loaded a,[data-ea-type].loaded a{text-decoration:none}[data-ea-publisher].loaded .ea-pixel,[data-ea-type].loaded .ea-pixel{display:none}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{margin:1em 1em 0.5em 1em;padding:1em;background:rgba(0,0,0,0.03);color:#505050}[data-ea-publisher].loaded .ea-content a:link,[data-ea-type].loaded .ea-content a:link{color:#505050}[data-ea-publisher].loaded .ea-content a:visited,[data-ea-type].loaded .ea-content a:visited{color:#505050}[data-ea-publisher].loaded .ea-content a:hover,[data-ea-type].loaded .ea-content a:hover{color:#373737}[data-ea-publisher].loaded .ea-content a:active,[data-ea-type].loaded .ea-content a:active{color:#373737}[data-ea-publisher].loaded .ea-content a strong,[data-ea-publisher].loaded .ea-content a b,[data-ea-type].loaded .ea-content a strong,[data-ea-type].loaded .ea-content a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a:link,[data-ea-type].loaded .ea-callout a:link{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:visited,[data-ea-type].loaded .ea-callout a:visited{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:hover,[data-ea-type].loaded .ea-callout a:hover{color:#505050}[data-ea-publisher].loaded .ea-callout a:active,[data-ea-type].loaded .ea-callout a:active{color:#505050}[data-ea-publisher].loaded .ea-callout a strong,[data-ea-publisher].loaded .ea-callout a b,[data-ea-type].loaded .ea-callout a strong,[data-ea-type].loaded .ea-callout a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a,[data-ea-type].loaded .ea-callout a{font-size:0.8em}[data-ea-publisher].loaded.dark .ea-content,[data-ea-type].loaded.dark .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:link,[data-ea-type].loaded.dark .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:visited,[data-ea-type].loaded.dark .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:hover,[data-ea-type].loaded.dark .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a:active,[data-ea-type].loaded.dark .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a strong,[data-ea-publisher].loaded.dark .ea-content a b,[data-ea-type].loaded.dark .ea-content a strong,[data-ea-type].loaded.dark .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-callout a:link,[data-ea-type].loaded.dark .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:visited,[data-ea-type].loaded.dark .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:hover,[data-ea-type].loaded.dark .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a:active,[data-ea-type].loaded.dark .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a strong,[data-ea-publisher].loaded.dark .ea-callout a b,[data-ea-type].loaded.dark .ea-callout a strong,[data-ea-type].loaded.dark .ea-callout a b{color:#50baf9}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.adaptive .ea-content,[data-ea-type].loaded.adaptive .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:link,[data-ea-type].loaded.adaptive .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:visited,[data-ea-type].loaded.adaptive .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:hover,[data-ea-type].loaded.adaptive .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a:active,[data-ea-type].loaded.adaptive .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a strong,[data-ea-publisher].loaded.adaptive .ea-content a b,[data-ea-type].loaded.adaptive .ea-content a strong,[data-ea-type].loaded.adaptive .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-callout a:link,[data-ea-type].loaded.adaptive .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:visited,[data-ea-type].loaded.adaptive .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:hover,[data-ea-type].loaded.adaptive .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a:active,[data-ea-type].loaded.adaptive .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a strong,[data-ea-publisher].loaded.adaptive .ea-callout a b,[data-ea-type].loaded.adaptive .ea-callout a strong,[data-ea-type].loaded.adaptive .ea-callout a b{color:#50baf9}}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.raised .ea-content,[data-ea-type].loaded.raised .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.bordered .ea-content,[data-ea-type].loaded.bordered .ea-content{border:1px solid rgba(0,0,0,0.04);border-radius:3px;box-shadow:none}[data-ea-publisher].loaded.bordered.dark .ea-content,[data-ea-type].loaded.bordered.dark .ea-content{border:1px solid rgba(255,255,255,0.07)}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.bordered.adaptive .ea-content,[data-ea-type].loaded.bordered.adaptive .ea-content{border:1px solid rgba(255,255,255,0.07)}}[data-ea-publisher].loaded.flat .ea-content,[data-ea-type].loaded.flat .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-type="image"].loaded,[data-ea-publisher]:not([data-ea-type]).loaded,.ea-type-image{display:inline-block}[data-ea-type="image"].loaded .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content,.ea-type-image .ea-content{max-width:180px;overflow:auto;text-align:center}[data-ea-type="image"].loaded .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>a>img,.ea-type-image .ea-content>a>img{width:120px;height:90px;display:inline-block}[data-ea-type="image"].loaded .ea-content>.ea-text,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>.ea-text,.ea-type-image .ea-content>.ea-text{margin-top:1em;font-size:1em;text-align:center}[data-ea-type="image"].loaded .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded .ea-callout,.ea-type-image .ea-callout{max-width:180px;margin:0em 1em 1em 1em;padding-left:1em;padding-right:1em;font-style:italic;text-align:right}[data-ea-type="image"].loaded.horizontal .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content,.ea-type-image.horizontal .ea-content{max-width:320px}[data-ea-type="image"].loaded.horizontal .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content>a>img,.ea-type-image.horizontal .ea-content>a>img{float:left;margin-right:1em}[data-ea-type="image"].loaded.horizontal .ea-content .ea-text,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content .ea-text,.ea-type-image.horizontal .ea-content .ea-text{margin-top:0em;text-align:left;overflow:auto}[data-ea-type="image"].loaded.horizontal .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-callout,.ea-type-image.horizontal .ea-callout{max-width:320px;text-align:right}[data-ea-type="text"].loaded,.ea-type-text{font-size:14px}[data-ea-type="text"].loaded .ea-content,.ea-type-text .ea-content{text-align:left}[data-ea-type="text"].loaded .ea-callout,.ea-type-text .ea-callout{margin:0.5em 1em 1em 1em;padding-left:1em;padding-right:1em;text-align:right;font-style:italic}[data-ea-style="stickybox"].loaded .ea-type-image{z-index:1000;position:fixed;bottom:20px;right:20px}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{cursor:pointer;position:absolute;top:0.75em;right:0.75em;background-color:#fefefe;border:1px solid #088cdb;border-radius:50%;color:#088cdb;font-size:1em;text-align:center;height:1.5em;width:1.5em;line-height:1.5em}@media (max-width: 1300px){[data-ea-style="stickybox"].loaded .ea-type-image{position:static;bottom:0;right:0;margin:auto;text-align:center}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{display:none}}@media (min-width: 1301px){[data-ea-style="stickybox"].loaded .ea-type-image .ea-content{background:#dcdcdc}[data-ea-style="stickybox"].loaded.dark .ea-type-image .ea-content{background:#505050}}@media (min-width: 1301px) and (prefers-color-scheme: dark){[data-ea-style="stickybox"].loaded.adaptive .ea-type-image .ea-content{background:#505050}}
+</style></head><body style=""><div id="MathJax_Message" style="display: none;"></div>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/index.html"><span id="logotext1">Data Science VC</span><span id="logotext2">-cookiecutter</span><span id="logotext3">:docs</span></a>
+  <ul>
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org/"></a></li>
+    <li><a title="General Index" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/genindex.html">Index</a></li>
+    <li><a title="Module Index" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/search.html" method="get">
+  <input type="text" name="q" placeholder="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/commands.html" title="Commands">
+	  next »
+	</a>
+      </li>
+      <li class="right">
+	<a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/getting_started.html" title="Getting Started">
+	  « previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/index.html">Cookiecutter Data Science - VC Edition v0.0.1</a>
+	 »
+      </li>
+      <li><a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/getting_started.html" accesskey="U">Getting Started</a> »</li>
+      
+      <li>Structuring your Project</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><a class="reference external" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/saved_resource"></a> <a class="reference external" href="https://github.com/vcalderon2009/cookiecutter-data-science-vc/blob/master/LICENSE"><img alt="Project License" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/license-MIT-blue.svg"></a> <a class="reference external" href="https://github.com/vcalderon2009/cookiecutter-data-science-vc/issues"><img alt="GitHub issues" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/cookiecutter-data-science-vc.svg"></a> <a class="reference external" href="http://test-cookieproj-rtd.rtfd.io/"><img alt="Version RTD" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/Version-RTD-orange.svg"></a> <a class="reference external" href="http://test-cookieproj-astropy.rtfd.io/"><img alt="Version Astropy" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/Version-Astropy-orange.svg"></a></p>
+<div class="section" id="structuring-your-project">
+<span id="install-main"></span><h1>Structuring your Project<a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#structuring-your-project" title="Permalink to this headline">¶</a></h1>
+<p><strong>Author</strong>: <a class="reference external" href="http://vcalderon.me/">Victor Calderon</a> (<a class="reference external" href="mailto:victor.calderon%40vanderbilt.edu">victor<span>.</span>calderon<span>@</span>vanderbilt<span>.</span>edu</a>)</p>
+<p><strong>Description</strong>: A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.</p>
+<p>Now that your have a <em>working</em> version of <strong>python</strong> on your computer,
+you can start doing research.</p>
+<p>One of the key elements of a project is for it to be <strong>reproducible</strong> by
+others. Having this in mind when you’re structuring your project will
+allow others to look at your code, understand it well enough to be able
+to <strong>recreate</strong> your results.</p>
+<p>This is a short guide on 2 ways to structure your code, without having
+to do much of creating documets, etc.</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#cookiecutter-and-folder-structure" id="id6">Cookiecutter and Folder structure</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#requirements-to-use-cookiecutter-templates" id="id7">Requirements to use <code class="xref py py-obj docutils literal notranslate"><span class="pre">cookiecutter</span></code> templates</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#data-science-cookiecutter" id="id8">Data Science - Cookiecutter</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#personal-version-cookiecutter" id="id9">Personal version - Cookiecutter</a><ul>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#to-start-a-new-project-and-prompts" id="id10">To start a new project and prompts</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#using-the-template" id="id11">Using the Template</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#editing-your-environment" id="id12">Editing your environment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#adding-your-project-repository-to-github" id="id13">Adding your Project repository to Github</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#documentation-for-your-new-project" id="id14">Documentation for your new project</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#continuous-integration-for-your-project" id="id15">Continuous Integration for your Project</a></li>
+</ul>
+</div>
+<div class="section" id="cookiecutter-and-folder-structure">
+<span id="proj-struc-cookiecutter-sec"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id6">Cookiecutter and Folder structure</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#cookiecutter-and-folder-structure" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> is a command-line
+utility that creates projects from cookiecutters (project templates),
+e.g. Python package projects, LaTeX documents, etc.</p>
+<p>Cookiecutter has been widely used for many projects, and each team and
+organization can create their own <em>template</em>. For more information,
+visit the
+<a class="reference external" href="https://cookiecutter.readthedocs.io/en/latest/">cookiecutter documentation</a>.</p>
+<p>As the famous say goes:</p>
+<blockquote class="epigraph">
+<div>Don’t reinvent the wheel!</div></blockquote>
+<p>You can always create your own folder and file structures, and organize
+your documents the old-fashioned way. The problem with this is that
+it may <strong>vary</strong> from project to project, and it will be more difficult to
+be consistent and effective throught your projects.</p>
+<p>For this reason, I rely on <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> templates to create the
+file and folder structure of a project.</p>
+<p>There are many different <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> templates out there, but
+after trying to find the best one that suits my needs in <strong>research</strong> and
+<strong>programming</strong>, I found one that works great! And after some modifications,
+I came up with a <em>version</em> of this template.</p>
+<p>These two templates are shown in <a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#proj-struc-cookiecutter-ds"><span class="std std-ref">Data Science - Cookiecutter</span></a> and
+<a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#proj-struc-cookiecutter-vc"><span class="std std-ref">Personal version - Cookiecutter</span></a>. But first, let’s make sure you have
+<code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> installed correctly.</p>
+</div>
+<div class="section" id="requirements-to-use-cookiecutter-templates">
+<span id="install-requirements"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id7">Requirements to use <code class="xref py py-obj docutils literal notranslate"><span class="pre">cookiecutter</span></code> templates</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#requirements-to-use-cookiecutter-templates" title="Permalink to this headline">¶</a></h2>
+<p>The minimum rquirements for creating <code class="xref py py-obj docutils literal notranslate"><span class="pre">cookiecutter</span></code> templates are:</p>
+<ul class="simple">
+<li>Python 2.7 or 3.5</li>
+<li><a class="reference external" href="http://cookiecutter.readthedocs.org/en/latest/installation.html">Cookiecutter Python package</a> &gt;= 1.4.0: This can be installed with <code class="xref py py-obj docutils literal notranslate"><span class="pre">pip</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">conda</span></code> depending on how you manage your Python packages.</li>
+</ul>
+<p>You  can install it by typing this on the terminal</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install cookiecutter
+</pre></div>
+</div>
+<p>or via Anaconda:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels conda-forge
+conda install cookiecutter
+</pre></div>
+</div>
+<p>Now you can use <code class="xref py py-obj docutils literal notranslate"><span class="pre">cookiecutter</span></code> to create new templates for projects and papers!</p>
+</div>
+<div class="section" id="data-science-cookiecutter">
+<span id="proj-struc-cookiecutter-ds"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id8">Data Science - Cookiecutter</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#data-science-cookiecutter" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science</a> is best described as</p>
+<blockquote>
+<div>A logical, reasonably standardized, but flexible project structure for
+doing and sharing data science work.</div></blockquote>
+<p>This folder structure allows everyone looking at your code to understand
+it right away. It also provides many different functions (as part of a
+<code class="docutils literal notranslate"><span class="pre">Makefile</span></code>) that simplify the workflow of your project.</p>
+<p>In a nutshell, this cookiecutter includes:</p>
+<ul class="simple">
+<li>A <strong>Makefile</strong> file with <a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id1"><span class="problematic" id="id2">**</span></a>useful functions.</li>
+<li><strong>Documentation</strong> to make your project easily accessible and readable</li>
+<li>And more!</li>
+</ul>
+<p>In order to use this template, you follow the documentation in
+<a class="reference external" href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter Data Science</a>.</p>
+</div>
+<div class="section" id="personal-version-cookiecutter">
+<span id="proj-struc-cookiecutter-vc"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id9">Personal version - Cookiecutter</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#personal-version-cookiecutter" title="Permalink to this headline">¶</a></h2>
+<p>If you need more than the <em>normal</em> Data Science Cookiecutter template, you can
+use my version. Some of the differences are:</p>
+<ul class="simple">
+<li>It includes and easy-to-use <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file that makes it easy to
+install dependencies.</li>
+<li>Extra functions in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>.</li>
+<li>Choice of what kind of documenation to use. One has the option choose from
+<em>traditional</em> <a class="reference external" href="https://readthedocs.org/dashboard/">Read The Docs</a> style or
+the <a class="reference external" href="https://github.com/astropy/sphinx-astropy">Astropy Sphinx Theme</a>.</li>
+</ul>
+<p>You can check how these two styles look like:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://test-cookieproj-rtd.rtfd.io/"><img alt="Version RTD" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/Version-RTD-orange.svg"></a> - <strong>Read The Docs Version</strong></li>
+<li><a class="reference external" href="http://test-cookieproj-astropy.rtfd.io/"><img alt="Version Astropy" src="./Structuring your Project — Cookiecutter Data Science - VC Edition v0.0.1_files/Version-Astropy-orange.svg"></a> - <strong>Astropy Version</strong></li>
+</ul>
+<p>Next, you can create your own Project based on this <em>cookiecutter</em> version</p>
+<div class="section" id="to-start-a-new-project-and-prompts">
+<span id="cookiecutter-prompts"></span><h3><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id10">To start a new project and prompts</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#to-start-a-new-project-and-prompts" title="Permalink to this headline">¶</a></h3>
+<p>To start a new project, type the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ cookiecutter https://github.com/vcalderon2009/cookiecutter-data-science
+</pre></div>
+</div>
+<p>If you want the <strong>default</strong> project scheme from <em>DrivenData</em> (see above), run:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/drivendata/cookiecutter-data-science
+</pre></div>
+</div>
+<p>Depending on what kind of folder structure you want, you might want to choose from the different types.</p>
+<p>After running this command, <strong>you will be prompted some questions</strong> regarding
+the parameters for the project. This will prompt you to answer a few
+questions like:</p>
+<div class="wy-table-responsive"><table border="1" class="docutils">
+<colgroup>
+<col width="45%">
+<col width="55%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Question</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">project_name</span></code></td>
+<td><p class="first">Name of the project. This can be
+similar to one on Github.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>SDSS_analysis</li>
+<li>Lung_cancer_analysis</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">repo_name</span></code></td>
+<td><p class="first">Name of the directory/repository,
+the project will be saved.
+This field <em>should not contain spaces</em>
+<em>should not contain spaces</em></p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>Calderon_Victor_Astro_PhD_Thesis</li>
+<li>Szewciw_Adam_Astro_PhD_Thesis</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">author_name</span></code></td>
+<td><p class="first">Author’s first name. It can include
+spaces</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>Adam Sanchez</li>
+<li>Rose Roserberg</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">author_email</span></code></td>
+<td><p class="first">Author’s email address.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li><a class="reference external" href="mailto:some_email%40gmail.com">some_email<span>@</span>gmail<span>.</span>com</a></li>
+<li><a class="reference external" href="mailto:another_email%40yahoo.com">another_email<span>@</span>yahoo<span>.</span>com</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">short_description</span></code></td>
+<td><p class="first">A short description of the project.
+This can be a <em>brief</em> overview of the
+project.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>Repository for lung cancer analysis</li>
+<li>Analysis on galaxies and cosmology</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">long_description</span></code></td>
+<td><p class="first">A longer version of
+<code class="code docutils literal notranslate"><span class="pre">short_description</span></code></p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>Repository for lung cancer analysis</li>
+<li>Analysis on galaxies and cosmology</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">open_source_license</span></code></td>
+<td><p class="first">Type of License for the paper. Without
+this, one cannot use any of.</p>
+<p>Options:</p>
+<ul class="last simple">
+<li>MIT</li>
+<li>BSD 3-Clause</li>
+<li>GNU GPL v3+</li>
+<li>Apache Software Licence 2.0</li>
+<li>BSD 2-Clause*</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">s3_bucket</span></code></td>
+<td>Path to AWS storage.
+This is <strong>temporarily</strong> disabled!!</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">aws_profile</span></code></td>
+<td>AWS profile name.
+This is <strong>temporarily</strong> disabled!!</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">conda_python_env</span></code></td>
+<td><p class="first">Name of the project’s anaconda
+environment. In order to use the
+packages of this project, you need
+to first <code class="docutils literal notranslate"><span class="pre">activate</span></code> this environment.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>lung_cancer_env</li>
+<li>SDSS_galaxies_env</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">github_username</span></code></td>
+<td><p class="first">Author’s Github username. This will
+be use tolink the project to the
+Github repository.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>username</li>
+<li>username2018</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">github_project</span></code></td>
+<td><p class="first">Name of the project on Github</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>Awesome_lung_analysis_username_2018</li>
+<li>Another_awesome_analysis</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">project_version</span></code></td>
+<td><p class="first">Version of the project.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>0.0.1</li>
+<li>0.1.2dev</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">use_travis_ci</span></code></td>
+<td><p class="first">If ‘y’, ‘.travis.yml’ will be installed
+This is useful when doing
+‘continuous integration’</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>y</li>
+<li>n</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">use_read_the_docs</span></code></td>
+<td>If ‘y’, it will use ReadTheDocs for docs</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">project_url</span></code></td>
+<td><p class="first">URL of the project <em>on Github</em>!
+You need to create this repository
+separately.*</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://github.com/username/proj_name">https://github.com/username/proj_name</a></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">minimum_python_version</span></code></td>
+<td>Python version to use for this analysis.
+This will set the python version in the
+‘environment.yml’ file.</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">python_interpreter</span></code></td>
+<td><p class="first">It assumes Python 3 version by <em>default</em></p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>Adam</li>
+<li>Rose</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">use_astropy_theme_or_RTD</span></code></td>
+<td><p class="first">Option for which kind of documentation
+to use.
+See the examples above to see which one
+you like.</p>
+<p>Options:</p>
+<ul class="last simple">
+<li><strong>RTD</strong>: Used ReadTheDocs-type of docs</li>
+<li><strong>Astropy</strong>: Used Astropy-type of docs</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="using-the-template">
+<span id="using-template"></span><h3><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id11">Using the Template</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#using-the-template" title="Permalink to this headline">¶</a></h3>
+<p>Now that one has answered the questions from <a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#cookiecutter-prompts"><span class="std std-ref">To start a new project and prompts</span></a>,
+you just need to populate the project with scripts, notebooks, and
+<strong>of course</strong>, documentation!!</p>
+<p>The structure of the finalized project can be found in the
+<a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/project_organization.html#proj-structure"><span class="std std-ref">Project Structure</span></a> section.</p>
+</div>
+<div class="section" id="editing-your-environment">
+<span id="proj-struc-cookiecutter-vc-env"></span><h3><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id12">Editing your environment</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#editing-your-environment" title="Permalink to this headline">¶</a></h3>
+<p>Now that you have a working proect from <strong>cookiecutter</strong>, you can start by
+editing the <em>environment</em> of your project.</p>
+<p>If you downloaded <strong>my version of cookiecutter</strong>, you should be able to edit
+the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file. This file states which packages
+need to be installed by Anaconda and <code class="docutils literal notranslate"><span class="pre">pip</span></code>  in order to run the
+scripts of the package.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file looks like the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>name: name_of_environment
+
+channels:
+  - defaults
+
+dependencies:
+  - python&gt;=3.6
+  - ipython
+  - anaconda
+  - astropy
+  - h5py
+  - numpy
+  - pandas
+  - scipy
+  - seaborn
+  - pip
+  - pip:
+    - GitPython
+    - progressbar2
+</pre></div>
+</div>
+<p>You can edit the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file to include/exclude packages
+needed by your project.</p>
+<p>After having edited the list of packages needed by your project, you can
+execute the command</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ make environment
+</pre></div>
+</div>
+<p>to <strong>create the environment</strong>.</p>
+<p>If you have done this step before, and you want to <strong>update the environment</strong>,
+you need to run</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ make update_environment
+</pre></div>
+</div>
+<p>instead.</p>
+</div>
+</div>
+<div class="section" id="adding-your-project-repository-to-github">
+<span id="proj-struc-cookiecutter-vc-github"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id13">Adding your Project repository to Github</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#adding-your-project-repository-to-github" title="Permalink to this headline">¶</a></h2>
+<p>If you follow the instructions from above, you should have</p>
+<ul class="simple">
+<li>Downloaded the repository</li>
+<li>Created your own project with the desired file and folder structure</li>
+<li>Created your working <strong>environment</strong> for you project</li>
+</ul>
+<p>The next step is to add it to <a class="reference external" href="https://github.com/">Github</a> and make
+it accessible.</p>
+<p>To do this, your should do the following:</p>
+<ol class="arabic simple">
+<li>Create a Github repository with the <strong>same name</strong> as the repository.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">remote</span> <span class="pre">origin</span> <span class="pre">git@github.com:&lt;username&gt;/&lt;project_name&gt;.git</span></code>.
+In here you need to <strong>replace</strong> <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">project_name</span></code> with
+your details.</li>
+<li><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code> - This will push your project to Github.</li>
+</ol>
+<p>To check that you did this correctly, type</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+</div>
+<p>and you should get something that looks like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>origin  https://github.com/&lt;username&gt;/&lt;project_name&gt;.git (fetch)
+origin  https://github.com/&lt;username&gt;/&lt;project_name&gt;.git (push)
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">project_name</span></code> pertain to your repository on
+Github.</p>
+<p>Now all of the files are online on Github, and should be ready to integrate
+them with <a class="reference external" href="https://readthedocs.org/">Read The Docs</a>.</p>
+</div>
+<div class="section" id="documentation-for-your-new-project">
+<span id="proj-struc-cookiecutter-vc-rtd"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id14">Documentation for your new project</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#documentation-for-your-new-project" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have both a working local and online copy of your code,
+the next step is to create the documentation for the project.</p>
+<p>For this, you can easily use <a class="reference external" href="https://readthedocs.org/">Read The Docs</a> (RTD).</p>
+<p>You need to do the following:</p>
+<ul class="simple">
+<li>Create an account on “Read the Docs”</li>
+<li>Go to your <code class="docutils literal notranslate"><span class="pre">Profile</span></code> and select <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Projects</span></code></li>
+<li>From there, you should import the repository <em>manually</em> (it’s easier).
+Click on <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">a</span> <span class="pre">Project</span></code> and follow the instructions.</li>
+<li>You should add the project with the <strong>same name</strong> as the Github Repo if
+possible. Otherwise, you might need to <strong>change</strong> the links to the <em>badges</em>
+on the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> files in the project, among others.</li>
+<li>Make sure that the repository was correctly built by looking at the
+<code class="docutils literal notranslate"><span class="pre">Builds</span></code> and see that it compiled correctly. If not, it should tell you
+if there was an error and what the error was.</li>
+<li>Now you go and change the documentation depending on the project’s needs.</li>
+</ul>
+</div>
+<div class="section" id="continuous-integration-for-your-project">
+<span id="proj-struc-cookiecutter-vc-travis"></span><h2><a class="toc-backref" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#id15">Continuous Integration for your Project</a><a class="headerlink" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#continuous-integration-for-your-project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Continuous integration</strong> deals with testing your code for possible errors,
+and making sure that everything is working as expected. Depending on
+your project’s needs.</p>
+<p>This template includes a <code class="docutils literal notranslate"><span class="pre">.travis.yml</span></code>, which the files used by
+<a class="reference external" href="https://travis-ci.org/">Travis CI</a>. Travis CI is a <em>Continuous integration</em>
+platform for testing your code, and checking the functionality of your
+project.</p>
+<p>Project based on the <a class="reference external" href="https://github.com/vcalderon2009/cookiecutter-data-science-vc">modified</a>  version of the
+<a class="reference external" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper" style="float: left; margin-right: 0px; width: 212px;"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#">Structuring your Project</a><ul>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#cookiecutter-and-folder-structure">Cookiecutter and Folder structure</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#requirements-to-use-cookiecutter-templates">Requirements to use <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> templates</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#data-science-cookiecutter">Data Science - Cookiecutter</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#personal-version-cookiecutter">Personal version - Cookiecutter</a><ul>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#to-start-a-new-project-and-prompts">To start a new project and prompts</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#using-the-template">Using the Template</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#editing-your-environment">Editing your environment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#adding-your-project-repository-to-github">Adding your Project repository to Github</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#documentation-for-your-new-project">Documentation for your new project</a></li>
+<li><a class="reference internal" href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#continuous-integration-for-your-project">Continuous Integration for your Project</a></li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      <div id="sidebarbutton" title="Collapse sidebar" style="color: rgb(255, 255, 255); background-color: rgb(80, 80, 80); border: 1px solid rgb(80, 80, 80); border-radius: 0px 3px 3px 0px; font-size: 1.2em; cursor: pointer; height: 6075px; padding-top: 1px; margin: -1px -1px -1px 218px;"><span style="font-family: &quot;Lucida Grande&quot;, Arial, sans-serif; display: block; top: 450.5px; width: 12px; position: fixed; text-align: center;">«</span></div></div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/_sources/getting_started/INSTALL.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html#">Back to Top</a></p>
+  <p>
+    © Copyright 2018, Victor Calderon.<br>
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1. &nbsp;
+    Last built 06 Nov 2018. <br>
+  </p>
+</footer>
+  
+<!-- Inserted RTD Footer -->
+
+<div class="injected">
+
+  
+  <div class="rst-versions rst-badge" data-toggle="rst-versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">&nbsp;</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+        <dd class="rtd-current-item">
+          <a href="https://cookiecutter-data-science-vc.readthedocs.io/en/latest/getting_started/INSTALL.html">latest</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="https://cookiecutter-data-science-vc.readthedocs.io/_/downloads/en/latest/pdf/">PDF</a></dd>
+        
+        <dd><a href="https://cookiecutter-data-science-vc.readthedocs.io/_/downloads/en/latest/htmlzip/">HTML</a></dd>
+        
+        <dd><a href="https://cookiecutter-data-science-vc.readthedocs.io/_/downloads/en/latest/epub/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/cookiecutter-data-science-vc/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/cookiecutter-data-science-vc/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/cookiecutter-data-science-vc/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/vcalderon2009/cookiecutter-data-science-vc/blob/master/docs/getting_started/INSTALL.rst">View</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/vcalderon2009/cookiecutter-data-science-vc/edit/master/docs/getting_started/INSTALL.rst">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/cookiecutter-data-science-vc/search/" method="get">
+              <input type="text" name="q" aria-label="Search docs" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+      <hr>
+
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+    </div>
+  </div>
+  
+
+</div>
+</body></html>
